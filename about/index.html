@@ -1,0 +1,494 @@
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from hn.premii.com/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Jun 2015 15:11:37 GMT -->
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600"/>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+            font-family: source sans pro, tahoma, arial;
+            font-size: 15px;
+            line-height: 1.61;
+            color: #555;
+            background: #f60;
+            background: -webkit-linear-gradient(left,  #333 17%, #f60 17%, #f60 34%, #14689C 34%, #14689C 51%, #3498db 51%, #3498db 67%, #1ABC9C 67%, #1ABC9C 84%,  #e8117F 84%, #e8117F 100%), #f9f9f9;
+            background: -ms-linear-gradient(left,  #333 17%, #f60 17%, #f60 34%, #14689C 34%, #14689C 51%, #3498db 51%, #3498db 67%, #1ABC9C 67%, #1ABC9C 84%,  #e8117F 84%, #e8117F 100%), #f9f9f9;
+            background: -moz-linear-gradient(left,  #333 17%, #f60 17%, #f60 34%, #14689C 34%, #14689C 51%, #3498db 51%, #3498db 67%, #1ABC9C 67%, #1ABC9C 84%,  #e8117F 84%, #e8117F 100%), #f9f9f9;
+            background: linear-gradient(left,  #333 17%, #f60 17%, #f60 34%, #14689C 34%, #14689C 51%, #3498db 51%, #3498db 67%, #1ABC9C 67%, #1ABC9C 84%,  #e8117F 84%, #e8117F 100%), #f9f9f9;
+            background-size: 100% 5px, 100% 100%;
+            background-repeat: no-repeat;
+
+
+        }
+        h1, h2, h3 {color: #f60; font-weight: 100;}
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            padding: 20px 0 15px;
+            text-align: center;
+             font-size: 145%;
+            font-weight: 400;
+        }
+
+        img {
+            border: 0;
+        }
+
+
+        .app-links {
+            margin: 0;
+            padding: 10px 10px;
+            background: rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .app-links a {
+            margin: 10px 3px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .app-links .apple,
+        .app-links .android,
+        .app-links .android img,
+        .app-links .apple img {
+            height: 43px;
+        }
+
+        .html5-badge {
+            padding: 0 20px;
+            background: #f60;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 300;
+            color: #fff;
+            line-height: 1;
+            height: 65px;
+            text-align: left;
+        }
+
+        .html5-badge small {
+            display: block;
+            padding-top: 10px;
+            font-size: 50%;
+            font-weight: 400;
+        }
+
+        .clearfix {
+            position: relative;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 200%;
+            color: #fff;
+            vertical-align: middle;
+            font-weight: 300;
+        }
+
+        .device {
+            min-height: 500px;
+            background: no-repeat 0 0;
+            background-size: cover;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .device-container {
+            padding-top: 85px;
+        }
+
+        .device-container img {
+            display: block;
+            width: 100%;
+        }
+
+        .device {
+            min-width: 300px;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .color-hn {
+            background: #f60;
+        }
+
+        .color-dark {
+            background: #333;
+        }
+        .color-blue {
+            background: #14689C;
+        }
+        .color-blue-light {
+            background: #3498db;
+        }
+        .color-green {
+            background: #1ABC9C;
+        }
+        .color-pink {
+            background: #e8117F;
+        }
+
+        .themes-colors {
+            display: inline-block;
+            background: rgba(0,0,0,0.2);
+            border-radius: 50px;
+            padding: 7px 4px;
+            line-height: 1;
+            font-size: 0;
+        }
+        .color {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50px;
+            margin: 0 4px;
+        }
+        .iphone {
+            background-image: url(../a/img/ios.png);
+            -webkit-transition: background 400ms ease-in;
+            -ms-transition: background 400ms ease-in;
+            -moz-transition: background 400ms ease-in;
+            transition: background 400ms ease-in;
+        }
+
+        .ios-menu .iphone {
+            background-image: url(../a/img/ios-menu.png);
+        }
+
+        .ios .home,
+        .ios .menu {
+            -webkit-transition: all 400ms ease-in;
+            -moz-transition: all 400ms ease-in;
+            -ms-transition: all 400ms ease-in;
+            transition: all 400ms ease-in;
+        }
+
+        .ios .home {
+            opacity: 1;
+        }
+
+        .ios-menu .home,
+        .ios .menu {
+            opacity: 0;
+        }
+
+        .ios-menu .menu {
+            opacity: 1;
+        }
+
+        .nexus {
+            background-image: url(../a/img/android-comments.png);
+            -webkit-transition: all 400ms ease-in;
+            -moz-transition: all 400ms ease-in;
+            -ms-transition: all 400ms ease-in;
+            transition: all 400ms ease-in;
+        }
+
+        .android-popup {
+            background-image: url(../a/img/android-popup.png);
+        }
+
+        .android-author {
+            background-image: url(../a/img/android-author.png);
+        }
+
+        .nokia {
+            background-image: url(../a/img/wp8.png);
+        }
+        .firefox {
+            background-image: url(../a/img/android-article.png);
+        }
+
+
+        .iphone {
+            background-position: 50% 48%;
+            background-size: 88%;
+        }
+
+        .nexus {
+            background-position:  50% 55%;
+            background-size: 92%;
+        }
+        .nokia {
+            background-position: 50% 47%;
+            background-size: 84%;
+        }
+        .firefox {
+            background-position: 50% 63%;
+            background-size: 87%;
+        }
+        .ipad {
+            background: url(../a/img/ipad-home.png) no-repeat 50% 50%;
+            background-size: 80.5%;
+        }
+        .tablet {
+            display: block;
+            padding: 0 20px;
+        }
+
+        .tablet .device-container {
+            display: block;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 40px 0;
+        }
+
+
+        @media only screen and (min-width : 768px) {
+
+            h1 {
+                font-size: 300%;
+                font-weight: 300;
+            }
+            h2 {
+                font-size: 250%;
+            }
+
+            .app-links a {
+                margin: 10px;
+            }
+            .app-links br {
+                display: none;
+            }
+            .app-links .apple,
+            .app-links .android,
+            .app-links .android img,
+            .app-links .apple img {
+                height: 65px;
+            }
+
+            .clearfix {
+                max-width: 1200px;
+                margin: 0 auto;
+                overflow: hidden;
+                font-size: 250%;
+            }
+
+            .text {
+                position: relative;
+                display: inline-block;
+                width: 45%;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .device-container {
+                padding: 0;
+                width: 50%;
+                text-align: center;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .device {
+                margin: 35px auto;
+            }
+
+            .mobile {
+                width: 10px;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="about">
+    <header>
+
+        <h1>Hacker News for Mobile/Tablet</h1>
+
+        <div class="app-links">
+            <a href="../index.html" data-track="click-hn" class="html5-badge"><small>HTML5 Web App </small>hn.premii.com</a>
+            <br>
+            <a href="https://itunes.apple.com/us/app/hacker-news-yc/id713733435" data-track="download-ios" class="apple">
+                <img alt="Get it on Apple App Store"
+                     src="../a/badge-app-store.svg" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.premii.hn" data-track="download-android" class="android">
+                <img alt="Get it on Google Play"
+                     src="../a/badge-google-play.svg" />
+            </a>
+        </div>
+    </header>
+    <div class="ios color-dark ">
+        <div class="clearfix">
+        <div class="text ">
+            <div class="home">FrontPage Stories</div>
+            <div class="menu">Other Stories</div>
+        </div>
+        <div class="device-container">
+            <div class="iphone device"><img src="../a/img/iphone-flat.png"></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="android color-hn">
+        <div class="clearfix">
+            <div class="device-container">
+                <div class="nexus device"><img src="../a/img/nexus4.png"></div>
+            </div>
+            <div class="text">
+                Comment thread<br>
+                Author Profile
+            </div>
+        </div>
+    </div>
+
+    <div class="wp8 color-green">
+        <div class="clearfix">
+        <div class="text">
+            Themes
+            <br>
+            <div class="themes-colors">
+                <span class="color color-hn"></span>
+                <span class="color color-dark"></span>
+                <span class="color color-blue"></span>
+                <span class="color color-blue-light"></span>
+                <span class="color color-green"></span>
+                <span class="color color-pink"></span>
+            </div>
+        </div>
+        <div class="device-container">
+            <div class="nokia device"><img src="../a/img/nokia.png"></div>
+        </div>
+        </div>
+    </div>
+    <div class="firefoxos color-blue-light">
+
+        <div class="clearfix">
+            <div class="device-container">
+                <div class="firefox device"><img src="../a/img/firefox.png"></div>
+            </div>
+            <div class="text">
+                Readability
+            </div>
+        </div>
+    </div>
+
+    <div class="tablet color-blue">
+        <div class="device-container">
+            <div class="ipad"><img src="../a/img/ipad-flat.png"></div>
+        </div>
+    </div>
+
+    <div class="mobile"></div>
+</div>
+
+
+
+<script>
+    var ios = document.querySelector('.ios');
+    var iosMenu = function() {
+        ios.classList.toggle('ios-menu');
+    }
+    window.setInterval(iosMenu, 3000);
+
+
+    var android = document.querySelector('.nexus');
+
+    var showPopup = function() {
+        android.classList.toggle('android-popup');
+        window.setTimeout(hidePopup, 4000);
+    }
+    var hidePopup = function() {
+        android.classList.toggle('android-popup');
+        window.setTimeout(showAuthor, 4500);
+    }
+    var showAuthor = function() {
+        android.classList.toggle('android-author');
+        window.setTimeout(hideAuthor, 4000);
+    }
+    var hideAuthor = function() {
+        android.classList.toggle('android-author');
+        window.setTimeout(showPopup, 3000);
+    }
+    window.setTimeout(showPopup, 3000);
+
+
+    (function() {
+
+        var trackUrl = 'http://t.premii.com/log/t.php?';
+
+        var track = function(action, obj) {
+            var data = [];
+
+            if (typeof obj == 'string') {
+                data.push(action + '=' + obj);
+            }
+            else {
+                for(var i in obj) {
+                    data.push(i + '=' + encodeURIComponent(obj[i]));
+                }
+            }
+            var img = new Image();
+            img.src = trackUrl + data.join('&');
+        };
+
+        var pa = function(action, obj) {
+            track(action, obj);
+        };
+        window.pa = pa;
+    }());
+
+    function getClosest(el, tag) {
+        // this is necessary since nodeName is always in upper case
+        tag = tag.toUpperCase();
+        do {
+            if (el.nodeName === tag) {
+                // tag name is found! let's return it. :)
+                return el;
+            }
+        } while (el = el.parentNode);
+    };
+
+    var onPointerDown = function(event) {
+        console.log('MouseDown');
+        var target = event.target,
+            link = getClosest(target, 'A'),
+            obj = {};
+
+        if (link && link.getAttribute('data-track')) {
+            pa('click', link.getAttribute('data-track'));
+        }
+    };
+
+
+    document.body.addEventListener('mousedown', onPointerDown, false);
+
+
+    (function() {
+        var referer = document.referrer;
+
+        if (referer && window.location.href.indexOf(referer) == -1) {
+
+            pa('referer', {
+                "referer": referer,
+                "landing": window.location.href
+            });
+        }
+    }());
+</script>
+</body>
+
+<!-- Mirrored from hn.premii.com/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Jun 2015 15:12:07 GMT -->
+</html>
+

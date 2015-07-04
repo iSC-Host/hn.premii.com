@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="web">
+
+<!-- Mirrored from hn.premii.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Jun 2015 15:11:27 GMT -->
+<head>
+    <meta charset="utf-8"/>
+    <script>t0=+new Date();</script>
+    <title>Hacker News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimal-ui">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta property="og:title" content="Hacker News"/>
+    <meta property="og:url" content="http://hn.premii.com/"/>
+    <meta property="og:description" content="Read Hacker News articles and comments with this clean, simple, modern looking and fast performing universal app."/>
+    <meta property="og:site_name" content="Hacker News"/>
+    <meta property="og:image" content="a/icon/ios/Icon-72@2x.png"/>
+
+    <script>
+        (function(){
+            if (window.location.hash.indexOf('close_window') > -1) window.close();
+            var parseUa = function(ua) {
+                        var classNames = '';
+                        var os;
+
+                        ua = ua.toLowerCase();
+
+                        if (ua.indexOf('win') > -1) {
+                            os = "windows";
+                            if (ua.match(/msie\s([\d]+)/) || ua.match(/trident/)) {
+                                classNames += " ie" + (ua.match(/touch/) ? " ie-touch" : "");
+                                if (ua.match(/iemobile\/([\d]+)/)) {
+                                    os = "wp";
+                                    classNames += " ie-mobile";
+                                }
+                            }
+                            else if (ua.indexOf('chrome') > -1) {
+                                classNames += " win-chrome";
+                            }
+                        }
+                        else if (ua.match(/(iphone|ipod|ipad)/)) {
+                            os = "ios";
+                            classNames += 'touch';
+                            var version,
+                                    ipad = ua.match(/(iPad).*OS\s([\d_]+)/i),
+                                    ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/i),
+                                    iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/i);
+
+                            if (iphone && !ipod) {version = iphone[2].replace(/_/g, '.')}
+                            else if (ipad) {version = ipad[2].replace(/_/g, '.')}
+                            else if (ipod) {version = ipod[3] ? ipod[3].replace(/_/g, '.') : null;}
+
+                            if (parseFloat(version) >= 7) {
+                                classNames += " ios7";
+                            }
+                        }
+
+                        else if  (ua.match(/(android)/)) {
+                            os = "android" ;
+                            if (ua.match(/firefox/)) {
+                                classNames += ' firefox';
+                            }
+                            else {
+                                classNames +=  ua.match(/chrome/)  ? ' android-chrome' : ' android-browser';
+                            }
+                        }
+
+                        if (window.navigator.standalone !== undefined && window.navigator.standalone) {
+                            classNames += ' standalone';
+                        }
+                        window.os = os;
+                        return os + " " + classNames;
+                    },
+                    ua = navigator.userAgent.toLowerCase(),
+                    htmlNode = document.querySelector('html');
+
+
+            var classNames = parseUa(ua),
+                    mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+                    (min--moz-device-pixel-ratio: 1.5),\
+                    (-o-min-device-pixel-ratio: 3/2),\
+                    (min-resolution: 1.5dppx)",
+                    retinaClass = (window.devicePixelRatio > 1 || (window.matchMedia && window.matchMedia(mediaQuery).matches) || classNames.indexOf('ie-mobile') >= 0) ? "retina" : '',
+                    touchClass = ("ontouchstart" in window) || window.navigator.msMaxTouchPoints > 0 ? 'touch' : 'non-touch';
+
+            htmlNode.className = htmlNode.className + " " + classNames + " " + retinaClass + " " + touchClass + (window.navigator.standalone ? ' standalone' : '');
+        }());
+    </script>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:400,300|Source+Sans+Pro:300,400|Roboto+Slab:400,300|Fira+Sans:300,400,500' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="a/css/glyph/style305c.css?0.09">
+
+    <link rel="stylesheet" href="resource/hn_0.88.css">
+
+
+    <link rel="manifest" href="hn-manifest.json">
+
+    <link rel="shortcut icon" sizes="192x192" href="a/icon/hn/Icon-192.png">
+
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="a/icon/hn/Icon-60%403x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="a/icon/hn/Icon-76%402x.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="a/icon/hn/Icon-72%402x.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="a/icon/hn/Icon-60%402x.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="a/icon/hn/Icon%402x.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="a/icon/hn/Icon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="a/icon/hn/Icon-72.png"/>
+    <link rel="apple-touch-icon" href="a/icon/hn/Icon.png"/>
+
+
+    <link rel="icon" href="a/icon/hn/Icon-228.html" sizes="228x228">
+    <link rel="icon" href="a/icon/hn/Icon-160.html" sizes="160x160" />
+    <link rel="icon" href="a/icon/hn/Icon-128.html" sizes="128x128">
+    <link rel="icon" href="a/icon/hn/Icon-96.png" sizes="96x96" />
+    <link rel="icon" href="a/icon/hn/Icon-64.html" sizes="64x64">
+    <link rel="icon" href="a/icon/hn/Icon-50.png" sizes="50x50">
+    <link rel="icon" href="a/icon/hn/Icon-48.png" sizes="48x48">
+    <link rel="icon" href="a/icon/hn/Icon-32.html" sizes="32x32">
+    <link rel="icon" href="a/icon/hn/Icon-16.png" sizes="16x16">
+
+    <meta name="theme-color" content="#ff6600">
+    <meta name="application-name" content="Hacker News"/>
+    <meta name="msapplication-TileColor" content="#ff6600" />
+
+    <style class="custom-theme" type="text/css"></style>
+</head>
+
+<body>
+
+<div class="touch absolute">
+    <div class="f-border theme-bg"></div>
+    <div class="pages-container absolute"></div>
+</div>
+<div class="mobile"></div>
+<div class="hairline-test"></div>
+<div class="app-modal"></div>
+<div class="flash-message"></div>
+<div class="touch-layer disable-touch-move"></div>
+<div id="topLevelComponent"></div>
+
+<script type="text/javascript">
+    (function(window) {
+
+        var config = {
+    "logjserror": 1,
+    "nativeApp": 0,
+    "apikey": "hn.premii.com",
+    "url": {
+        "tracking": "http://t.premii.com",
+        "jserror": "http://e.premii.com",
+        "stories": [
+            "http://n.premii.com:8080",
+            "http://n2.premii.com:8080/"
+        ],
+        "readLater": {
+            "server": "http://api.premii.com",
+            "native": "/readlater/?done=true&apikey=native.hn.premii.com",
+            "pocket": {
+                "auth": "/readlater/",
+                "add": "/readlater/"
+            },
+            "readability": {
+                "auth": "/readlater/",
+                "add": "/readlater/"
+            }
+        },
+        "storiesBackup": null,
+        "share": "http://hn.premii.com/",
+        "readability": "http://aws-api.premii.com/readability.php?url={url}&id={id}&apikey={apikey}&d=20150413"
+    },
+    "v": {
+        "js": "1.58",
+        "css": "0.88",
+        "app": 10
+    },
+    "hnid": null,
+    "appName": "hn-www",
+    "appDisplayName": "Hacker News",
+    "browserType": "blank",
+    "promoJsFile": "{{promoJsFile}}",
+    "yc": {
+        "isLoggedIn": false
+    },
+    "appearance": {
+        "fontSize": 15,
+        "fontFamily": "Source Sans Pro",
+        "themeStyle": "Light",
+        "color": "#ff6600",
+        "animation": "Enable",
+        "browser": "In App",
+        "layoutNavigatiaon": "default",
+        "layoutSplit": "Enable"
+    },
+    "gaId": "UA-40908284-1"
+};
+
+        config.os =  window.os || window.navigator.platform;
+        config.locationPath =  config.nativeApp ? "/" : location.pathname;
+
+        window.$config = config;
+        window.$ui = {};
+        window.$app = {};
+        window.$api = {};
+
+        window.debug = true;
+
+        if (location.search.indexOf('crm') >= 0) {
+            config.appName = config.appName + '-crm';
+        }
+        else if (config.platform){
+            config.appName = config.appName + '-' + config.platform;
+        }
+
+        window.t1 = +new Date();
+
+        var uId = JSON.parse(window.localStorage.getItem('uid'));
+        var hnId = JSON.parse(window.localStorage.getItem('hnid'));
+        if (hnId) {
+            uId = hnId;
+            window.localStorage.removeItem('hnid');
+            window.localStorage.setItem('uid', JSON.stringify(uId));
+        }
+        if (!uId) {
+            uId = '_' + Math.random().toString(36).substr(2, 9);
+            window.localStorage.setItem('uid', JSON.stringify(uId));
+        }
+
+        window.$app.uid = uId;
+
+        var accessToken = (window.location.hash || '#').slice(1).split("&").reduce(function(o,n){
+            n = n.split('=');
+            o[n[0]] = window.decodeURIComponent(n[1]);
+            return o;
+        },{});
+
+        if (accessToken.access_token) {
+            accessToken.expires = +new Date + (accessToken.expires_in * 1000);
+            config.user.accessToken = accessToken;
+            window.location.hash = ''; //@todo should be previous location
+        }
+    }(this));
+
+
+</script>
+
+<script src="resource/hn_1.58.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+    helper.enableAnalytics({
+        'gaId': $config.gaId,
+        'gaDomain': 'premii.com',
+        'appName': $config.appName,
+        'appVersion': window.$config.v.app.toString(),
+        'jsVersion': window.$config.v.js.toString(),
+        'cssVersion': window.$config.v.css.toString(),
+        'localAnalyticsUrl': window.$config.url.tracking + '/log/t.php?',
+        'apikey': $config.apikey,
+        'uid': window.$app.uid
+    });
+
+    (function (window, document, scriptNode) {
+        scriptNode = document.createElement('script');
+        scriptNode.src = 'resource/proma18a.js?t=' + +new Date();
+        document.body.appendChild(scriptNode);
+    }(window, document));
+
+
+    $.get('resource/proma18a.js?t=' + +new Date());
+
+</script>
+</body>
+
+<!-- Mirrored from hn.premii.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Jun 2015 15:11:34 GMT -->
+</html>
+
